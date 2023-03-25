@@ -61,10 +61,14 @@ void PrintArray(string[] array)
 
 // Program body--------------------------------------------
 int number = Promt("Введите размер массива: ");
-string[] arr = CreateArrayString(number);
-int quantity = QuantityElemArrayLessThree(arr);
-string[] newArr = NewArrayString(arr, quantity);
-Console.Clear();
-PrintArray(arr);
-Console.WriteLine();
-PrintArray(newArr);
+if (number > 0)
+{
+	string[] arr = CreateArrayString(number);
+	int quantity = QuantityElemArrayLessThree(arr);
+	string[] newArr = NewArrayString(arr, quantity);
+	Console.Clear();
+	PrintArray(arr);
+	Console.WriteLine();
+	PrintArray(newArr);
+}
+else Console.WriteLine("Размер массива должен быть больше 0!");
