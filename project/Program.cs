@@ -47,3 +47,24 @@ string[] NewArrayString(string[] array, int size)
 	}
 	return newArray;
 }
+void PrintArray(string[] array)
+{
+	Console.Write("[");
+	for (int i = 0; i < array.Length; i++)
+	{
+		if (i < array.Length - 1) Console.Write($"{array[i]}, ");
+		else Console.Write($"{array[i]}");
+	}
+	Console.WriteLine("]");
+}
+
+
+// Program body--------------------------------------------
+int number = Promt("Введите размер массива: ");
+string[] arr = CreateArrayString(number);
+int quantity = QuantityElemArrayLessThree(arr);
+string[] newArr = NewArrayString(arr, quantity);
+Console.Clear();
+PrintArray(arr);
+Console.WriteLine();
+PrintArray(newArr);
